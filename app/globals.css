@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Neo-Brutalist Theme Colors */
+  --color-background: #fafafa;
+  --color-primary: #ff007f;
+  --color-secondary: #00f0ff;
+  --color-accent: #ffe600;
+  --color-success: #14f195;
+  --color-text: #1a1a1a;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FAFAFA] text-[#1A1A1A] font-sans;
+  }
+}
+
+@layer components {
+  .neo-brutalist-card {
+    @apply bg-white border-8 border-black rounded-none
+           shadow-[16px_16px_0px_0px_theme(colors.black)] 
+           hover:translate-x-[-8px] hover:translate-y-[-8px] 
+           hover:shadow-[24px_24px_0px_0px_theme(colors.black)]
+           transition-all duration-300;
+  }
+
+  .neo-brutalist-button {
+    @apply bg-[#FFE600] text-black font-black uppercase
+           border-4 border-black rounded-none
+           hover:translate-x-[-4px] hover:translate-y-[-4px]
+           hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]
+           active:translate-x-[0px] active:translate-y-[0px]
+           active:shadow-none
+           transition-all duration-200;
+  }
+
+  .geometric-shape {
+    @apply absolute pointer-events-none opacity-50;
+  }
+}
+
+/* Form Controls */
+.input-neo {
+  @apply border-4 border-black rounded-none px-4 py-2
+         focus:outline-none focus:ring-4 focus:ring-[#FF007F]
+         focus:border-[#FF007F] transition-all duration-200;
+}
+
+.select-neo {
+  @apply border-2 border-black rounded-md
+         focus:outline-none focus:ring-2 focus:ring-[#FF007F]
+         focus:border-[#FF007F] transition-all duration-200;
+}
+
+.active-tab {
+  border-bottom: 4px solid #14f195; /* Neon green border */
+  color: #14f195; /* Match text color with border */
+  box-shadow: 0px 4px 10px rgba(20, 241, 149, 0.6); /* Glowing effect */
+}
+
+.tab-button {
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.tab-button:hover {
+  border-bottom: 4px solid #ffd700; /* Gold hover effect */
+  color: #ffd700;
+}
+
+/* Geometric Background Shapes */
+.geometric-circle {
+  @apply geometric-shape rounded-full;
+  animation: float 20s infinite linear;
+}
+
+.geometric-triangle {
+  @apply geometric-shape;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: spin 30s infinite linear;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(40px, 40px) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
