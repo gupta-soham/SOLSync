@@ -1,8 +1,8 @@
 # 🔄 SOLSync - Solana Token Management Platform
 
-SOLSync is a modern web application for managing Solana tokens, built with Next.js, featuring a neo-brutalist design system and comprehensive token management capabilities. It provides a user-friendly interface for interacting with the Solana blockchain, managing tokens, and performing various token-related operations.
+SOLSync is a modern web application for managing Solana tokens, built with Next.js, featuring a neo-brutalist design system and comprehensive token management capabilities. It provides a user-friendly interface for interacting with the Solana blockchain, managing tokens and performing various token-related operations.
 
-![SOLSync Banner](/public/solsync-banner.png)
+![SOLSync Banner](/public/og.png)
 
 ## 📑 Table of Contents
 
@@ -53,7 +53,7 @@ SOLSync is a modern web application for managing Solana tokens, built with Next.
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js 13+](https://nextjs.org/) (App Router)
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
