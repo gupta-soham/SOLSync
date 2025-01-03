@@ -12,6 +12,7 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { SiGithub } from "react-icons/si";
 import { Toaster } from "sonner";
 
 export interface Tab {
@@ -51,7 +52,7 @@ export function ClientContent({
           <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8">
             Sync seamlessly with Solana to manage tokens, swaps, and accounts.
           </p>
-          <WalletMultiButton className="w-full neo-button h-12 md:h-16 text-base md:text-lg !bg-[#FFE600] !text-black hover:!bg-[#14F195]" />
+          <WalletMultiButton />
 
           <div className="mt-4 md:mt-6">
             <span className="text-gray-800 font-medium">
@@ -81,8 +82,16 @@ export function ClientContent({
             SOL<span className="text-[#FF007F]">Sync</span>
           </h1>
           <div className="flex flex-col md:flex-row items-stretch md:items-center gap-2 md:gap-4">
+            <Link
+              href="https://github.com/gupta-soham/SOLSync"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="neo-brutalist-button flex items-center justify-center bg-black text-white p-1 sm:p-2 w-10 h-10 sm:w-12 sm:h-12 rounded-full  transition-colors duration-300 hover:bg-[#FF007F]"
+            >
+              <SiGithub className="w-6 h-6 sm:w-8 sm:h-8" />
+            </Link>
             <NetworkSelector />
-            <WalletMultiButton className="neo-button h-12 !bg-[#FFE600] !text-black hover:!bg-[#14F195]" />
+            <WalletMultiButton />
           </div>
         </div>
 

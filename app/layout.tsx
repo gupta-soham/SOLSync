@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SOLSync - Seamless Solana Token Management",
     description: "Manage Solana tokens, swaps and accounts with ease",
-    creator: "@_soham_gupta",
+    creator: "@sohamgpt",
     images: ["/og.png"],
   },
 };
